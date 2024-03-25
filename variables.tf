@@ -128,3 +128,10 @@ variable "expired_object_delete_marker_status" {
   default = "Enabled"
   
 }
+variable "tags" {
+  description = "A map of tags to add to all resources"
+  type        = map(string)
+  default     = {
+    Project = "MyProject"
+  }
+}
