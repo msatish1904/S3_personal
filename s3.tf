@@ -1,8 +1,3 @@
-resource "aws_s3_bucket" "s3" { 
-  bucket        = var.bucket_name
-  tags          = var.tags 
-}
-
 resource "aws_s3_bucket_versioning" "s3" {
   count  = var.enable_versioning ? 1 : 0
   bucket = aws_s3_bucket.s3.id
