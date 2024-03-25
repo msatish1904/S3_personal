@@ -128,13 +128,3 @@ variable "expired_object_delete_marker_status" {
   default = "Enabled"
   
 }
-variable "tags" {
-  description = "A mapping of tags to assign to the resource"
-  type        = map(string)
-  default     = {
-    "Project"     = "CloudOps"     ## The name of the project that the resource is used for.
-    "Application" = "Testing"     ## The name of the application or feature of that the resource belongs to.
-    "Owner"       = "xxxxxxxxx@altimetrik.com"     ## The email address of the person or team that owns the resource (@altimetrik.com)
-    "Environment" = "Test"     ## The environment in which the resource is used. Allowed values are "Test", "QA", "Staging", "Development", "Non-Prod", "Sandbox", "UAT", "Prod"
-  }
-}
